@@ -1,19 +1,20 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-class Node{
-    public:
+class Node
+{
+public:
     int data;
-    Node* left;
+    Node *left;
     Node *right;
 
-    Node(int d){
+    Node(int d)
+    {
         this->data = d;
         this->left = NULL;
         this->right = NULL;
     }
-
 };
 // void levelOrdertraversal(Node *root)
 // {
@@ -50,67 +51,107 @@ class Node{
 //     }
 // }
 
-Node* insertintoBST(Node * root, int d){
+Node *insertintoBST(Node *root, int d)
+{
 
-    if(root == NULL){
+    if (root == NULL)
+    {
         root = new Node(d);
         return root;
     }
-    if(d>root->data){
-        root -> right = insertintoBST(root->right,d);
+    if (d > root->data)
+    {
+        root->right = insertintoBST(root->right, d);
     }
-    else{
-        root->left = insertintoBST(root->left,d);
+    else
+    {
+        root->left = insertintoBST(root->left, d);
     }
-        return root;
+    return root;
 }
 
-void takeinput(Node *&root){
+void takeinput(Node *&root)
+{
 
-        int data;
-        cin>>data;
+    int data;
+    cin >> data;
 
-        while (data != -1)
-        {
-            /* code */
-            root = insertintoBST(root,data);
-            cin>> data;
-        }
-        
+    while (data != -1)
+    {
+        /* code */
+        root = insertintoBST(root, data);
+        cin >> data;
+    }
 };
+Node *deleteNode(Node *root, int valu){
 
+    if (root == NULL)
+    {
+        return root;
+    }
+    // 0 child
+    if (root->data == valu)
+    {
+        delete root;
+    }
 
-//minimum value if the BST
-Node* minValu(Node* root){
-    Node* temp = root;
-    while(temp->left = NULL){
-            temp = temp ->left;
-        
+    // 1 child
+
+    // left wala
+    if (root->left != NULL && root->right == NULL)
+    {
+        Node *temp = root->left;
+        delete root;
+        return temp;
+    }
+    // right wala
+    if (root->right != NULL && root->left == NULL)
+    {
+        Node *temp = root->right;
+        delete root;
+        return temp;
+    }
+
+    // 2 child
+
+else if (root->data > valu){
+    root->left = 
+    
+     }
+}
+
+// minimum value if the BST
+Node *
+minValu(Node *root)
+{
+    Node *temp = root;
+    while (temp->left = NULL)
+    {
+        temp = temp->left;
     }
     return temp;
-    
-    
 }
-Node* maxValu(Node* root){
-    Node* temp = root;
-    while(temp->right != NULL){
-            temp = temp->right;
-        
+Node *maxValu(Node *root)
+{
+    Node *temp = root;
+    while (temp->right != NULL)
+    {
+        temp = temp->right;
     }
     return temp;
-    
-    
 }
 
-int main(){
-    Node* root  = NULL;
+int main()
+{
+    Node *root = NULL;
 
-    cout<< "Enter data to create BST: ";
+    cout << "Enter data to create BST: ";
 
     takeinput(root);
     // levelOrdertraversal(root);
-    cout << " MIN value is " << minValu(root)->data<<endl;;
+    cout << " MIN value is " << minValu(root)->data << endl;
+    ;
     cout << " Max value is " << maxValu(root)->data;
-    
+
     return 0;
 }
