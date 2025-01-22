@@ -17,7 +17,7 @@ public:
     }
 };
 // void levelOrdertraversal(Node *root)
-// {
+//{
 //     queue<Node *> q;
 //     q.push(root);
 //     q.push(NULL);
@@ -28,7 +28,7 @@ public:
 //         q.pop();
 
 //         if (temp == NULL)
-//         {
+//         {f
 //             cout << endl;
 //             if (!q.empty())
 //             {
@@ -117,8 +117,9 @@ Node *deleteNode(Node *root, int valu){
 else if (root->data > valu){
     root->left = 
     
-     }
 }
+}
+
 
 // minimum value if the BST
 Node *
