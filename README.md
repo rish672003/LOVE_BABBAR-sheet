@@ -1,6 +1,6 @@
 # DSA Learning Repository
 
-Welcome to my DSA Learning repository! This is a personal project where I am learning Data Structures and Algorithms (DSA) and solving various questions to improve my problem-solving skills. The repository contains a collection of algorithms, data structures, and solutions to different coding problems.
+Welcome to my DSA Learning repository! This is a personal project where I am learning Data Structures and Algorithms (DSA) with Love babbar sheet and solving various questions to improve my problem-solving skills. The repository contains a collection of algorithms, data structures, and solutions to different coding problems.
 
 ## Table of Contents
 
