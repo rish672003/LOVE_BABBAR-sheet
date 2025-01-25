@@ -15,3 +15,5 @@ class Solution {
         
     }
 };
+
+//this is solved by Two pointers methods
