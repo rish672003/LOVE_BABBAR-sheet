@@ -75,4 +75,3 @@ This repository is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Happy learning, and feel free to reach out if you have any questions or suggestions!
